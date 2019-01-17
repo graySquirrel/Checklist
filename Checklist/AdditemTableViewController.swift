@@ -39,5 +39,9 @@ class AdditemTableViewController: UITableViewController {
 }
 
 extension AdditemTableViewController: UITextFieldDelegate {
-    
+    // resign makes the keyboard disappear
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return false
+    }
 }
